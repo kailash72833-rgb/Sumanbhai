@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+   <title>𝐒𝐔𝐌𝐀𝐍 𝐁𝐇𝐀𝐈 | 𝐒𝐂𝐀𝐌𝐌𝐄𝐑 𝐊𝐀 𝐁𝐀𝐀𝐏</title>
+   
+<style>
+   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Orbitron:wght@400;500;700;800&display=swap');
+
+  :root {
+       --bg-primary: #0a0a0f;
+       --bg-secondary: #11111f;
+       --bg-card: rgba(20, 20, 35, 0.9);
+       --border: rgba(255, 255, 255, 0.1);
+       --gradient-1: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+       --gradient-3: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+       --accent-blue: #4facfe;
+       --text-primary: #ffffff;
+       --text-secondary: #b0b0d0;
+       --shadow-lg: 0 15px 40px rgba(0, 0, 0, 0.4);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+
+   body {
+       background: var(--bg-primary); color: var(--text-primary);
+       font-family: 'Poppins', sans-serif; min-height: 100vh; overflow-x: hidden;
+       display: flex; align-items: center; justify-content: center;
+  }
+
+   .bg-animation { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -2; overflow: hidden; pointer-events: none; }
+   .bg-particle { position: absolute; background: var(--accent-blue); border-radius: 50%; animation: float 25s infinite linear; opacity: 0.08; }
+   @keyframes float { 0% { transform: translateY(0) rotate(0deg); } 100% { transform: translateY(-100px) rotate(360deg); } }
+
+   .container { width: 100%; max-width: 400px; margin: 0 auto; padding: 20px; position: relative; z-index: 1; }
+
+   .brand-header { text-align: center; margin-bottom: 35px; }
+   .brand-logo { font-family: 'Orbitron', sans-serif; font-size: 2.2rem; font-weight: 800; background: var(--gradient-1); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-shadow: 0 5px 20px rgba(102, 126, 234, 0.4); display: inline-block; margin-bottom: 5px; }
+   .brand-subtitle { color: var(--text-secondary); font-size: 0.85rem; letter-spacing: 3px; text-transform: uppercase; font-weight: 600; }
+   .brand-separator { width: 60px; height: 4px; background: var(--gradient-3); margin: 15px auto 0 auto; border-radius: 50px; box-shadow: 0 0 10px var(--accent-blue); }
+
+   .dev-top-link { position: absolute; top: -40px; left: 50%; transform: translateX(-50%); background: rgba(15, 15, 30, 0.85); border: 1px solid rgba(79, 172, 254, 0.4); color: var(--accent-blue); padding: 6px 15px; border-radius: 50px; font-size: 0.7rem; font-weight: 700; letter-spacing: 1px; box-shadow: 0 5px 20px rgba(0,0,0,0.4); white-space: nowrap; }
+
+   .glass-card { background: var(--bg-card); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid var(--border); border-radius: 20px; padding: 30px 25px; box-shadow: var(--shadow-lg); }
+   .card-title { text-align: center; font-family: 'Orbitron', sans-serif; font-size: 1.5rem; margin-bottom: 25px; letter-spacing: 1px; }
+
+   .input-group { margin-bottom: 20px; }
+   .input-group label { display: block; color: var(--text-secondary); font-size: 0.75rem; margin-bottom: 8px; font-weight: 600; letter-spacing: 1px; }
+   .input-group input { width: 100%; padding: 14px 15px; background: rgba(0,0,0,0.3); border: 1px solid var(--border); border-radius: 10px; color: var(--text-primary); font-family: 'Poppins', sans-serif; font-size: 0.9rem; outline: none; transition: 0.3s; }
+   .input-group input:focus { border-color: var(--accent-blue); box-shadow: 0 0 15px rgba(79,172,254,0.15); }
+
+   .btn-primary { width: 100%; padding: 15px; margin-top: 10px; background: var(--gradient-3); border: none; border-radius: 10px; color: white; font-weight: 700; font-size: 1rem; letter-spacing: 1px; cursor: pointer; font-family: 'Orbitron', sans-serif; transition: 0.3s; }
+   .btn-primary:hover { box-shadow: 0 8px 25px rgba(79,172,254,0.4); transform: translateY(-2px); }
+
+   .bottom-text { text-align: center; margin-top: 20px; font-size: 0.8rem; color: var(--text-secondary); }
+   .bottom-text a { color: var(--accent-blue); text-decoration: none; font-weight: 600; }
+</style>
+</head>
+<body>
+
+   <div class="bg-animation" id="particles"></div>
+
+   <div class="container">
+       <div class="dev-top-link">SYSTEM ACCESS</div>
+       
+       <div class="brand-header">
+           <h1 class="brand-logo">𝐒𝐔𝐌𝐀𝐍 𝐁𝐇𝐀𝐈</h1>
+           <div class="brand-subtitle">𝐒𝐂𝐀𝐌𝐌𝐄𝐑 𝐊𝐀 𝐁𝐀𝐀𝐏</div>
+           <div class="brand-separator"></div>
+       </div>
+
+       <div class="glass-card">
+           <h2 class="card-title">SECURE LOGIN</h2>
+           
+           <div class="input-group">
+               <label>USERNAME</label>
+               <input type="text" id="devUser" placeholder="Enter your username" autocomplete="off">
+           </div>
+           
+           <div class="input-group">
+               <label>PASSWORD</label>
+               <input type="password" id="devPass" placeholder="••••••••">
+           </div>
+           
+           <button class="btn-primary" id="authBtn">LOGIN</button>
+           
+           <div class="bottom-text">
+               Don't have an access key? <a href="#">Request Access</a>
+           </div>
+       </div>
+   </div>
+
+   <script>
+       const particlesContainer = document.getElementById('particles');
+       for(let i=0; i<15; i++) {
+           let particle = document.createElement('div');
+           particle.classList.add('bg-particle');
+           let size = Math.random() * 80 + 20;
+           particle.style.width = size + 'px'; particle.style.height = size + 'px';
+           particle.style.left = Math.random() * 100 + 'vw'; particle.style.top = Math.random() * 100 + 'vh';
+           particle.style.animationDuration = (Math.random() * 20 + 10) + 's';
+           particlesContainer.appendChild(particle);
+       }
+
+       document.getElementById('authBtn').addEventListener('click', async function() {
+           const uInput = document.getElementById('devUser').value.trim();
+           const pInput = document.getElementById('devPass').value.trim();
+           const btn = document.getElementById('authBtn');
+
+           const workerUrl = "https://curly-band-fc56.kailash72833.workers.dev/"; 
+
+           if(!uInput || !pInput) {
+               alert("Please enter both username and password.");
+               return;
+           }
+
+           btn.innerText = "VERIFYING...";
+           btn.style.opacity = "0.7";
+
+           try {
+               const response = await fetch(workerUrl, {
+                   method: 'POST',
+                   headers: { 'Content-Type': 'application/json' },
+                   body: JSON.stringify({ username: uInput, password: pInput })
+               });
+
+               const data = await response.json();
+
+               if (data.success) {
+                   alert("Access Granted! Welcome Suman.");
+                   // YAHAN PAR REDIRECT HOGA MAIN TOOL PAR
+                   window.location.href = "dashboard.html"; 
+               } else {
+                   alert("Invalid Credentials! Access Denied.");
+               }
+           } catch (error) {
+               alert("Server Error! Failed to connect to secure gateway.");
+               console.error("Fetch error:", error);
+           } finally {
+               btn.innerText = "LOGIN";
+               btn.style.opacity = "1";
+           }
+       });
+   </script>
+</body>
+</html>
