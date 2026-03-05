@@ -53,8 +53,10 @@
    .btn-primary { width: 100%; padding: 15px; margin-top: 10px; background: var(--gradient-3); border: none; border-radius: 10px; color: white; font-weight: 700; font-size: 1rem; letter-spacing: 1px; cursor: pointer; font-family: 'Orbitron', sans-serif; transition: 0.3s; }
    .btn-primary:hover { box-shadow: 0 8px 25px rgba(79,172,254,0.4); transform: translateY(-2px); }
 
-   .bottom-text { text-align: center; margin-top: 20px; font-size: 0.8rem; color: var(--text-secondary); }
-   .bottom-text a { color: var(--accent-blue); text-decoration: none; font-weight: 600; }
+   /* NAYA GET KEY BUTTON CSS */
+   .btn-secondary { display: block; width: 100%; padding: 15px; margin-top: 15px; background: rgba(255, 255, 255, 0.05); border: 1px solid var(--border); border-radius: 10px; color: var(--text-primary); font-weight: 700; font-size: 1rem; letter-spacing: 1px; text-align: center; text-decoration: none; font-family: 'Orbitron', sans-serif; transition: 0.3s; }
+   .btn-secondary:hover { background: rgba(255, 255, 255, 0.1); border-color: var(--accent-blue); box-shadow: 0 0 15px rgba(79,172,254,0.15); }
+
 </style>
 </head>
 <body>
@@ -85,9 +87,8 @@
            
            <button class="btn-primary" id="authBtn">LOGIN</button>
            
-           <div class="bottom-text">
-               Don't have an access key? <a href="#">Request Access</a>
-           </div>
+           <a href="https://t.me/Brexxee" target="_blank" class="btn-secondary">GET KEY</a>
+           
        </div>
    </div>
 
@@ -128,7 +129,6 @@
                const data = await response.json();
 
                if (data.success) {
-                   alert("Access Granted! Welcome Suman.");
                    // YAHAN PAR REDIRECT HOGA MAIN TOOL PAR
                    window.location.href = "dashboard.html"; 
                } else {
